@@ -1,0 +1,57 @@
+html,body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-y:hidden;
+}
+
+.landing {
+    height: 110vh;
+    width: auto;
+    background: url('background.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #1f1f1f;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+}
+
+path {
+    fill: #fff;
+    stroke: #fff;
+    stroke-dasharray: 1500;
+    opacity: 1;
+    animation: animate 2.5s cubic-bezier(0,.9,.95,.68);
+}
+
+@keyframes animate {
+    0% {
+        opacity: 1;
+        fill: none;
+        stroke-dashoffset: 1500;
+    }
+
+    30% {
+        opacity: 1;
+        fill: none;
+        stroke-dashoffset: 1500;
+    }
+
+    90% {
+        fill: rgba(255,255,255,0);
+    }
+
+    100% {
+        fill: rgba(255,255,255,1);
+        stroke-dashoffset: 0;
+    }
+}
